@@ -17,9 +17,12 @@ export class SpotifyService {
               'Authorization' : 'Bearer ' + 'token'
      }     
      );
-     
-     return this.http.get(url,{headers})
 
+     return this.http.get(url,{headers})
+    }
+
+    getNewRelease (){
+      return this.getQuery('browse/new-releases')
     }
 
 }
